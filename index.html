@@ -37,7 +37,10 @@
                         <a href="#" class="find">Поиск</a>
                         <div class="find_block">
                             <form class="find_form" action="https://echo.htmlacademy.ru" method="post">
-                                <input type="text" name="find" placeholder="Что ищем?">
+                                <div class="hover_description">
+                                    <input type="text" name="find" data-description="Что ищем?" placeholder="Что ищем?">
+                                    <label for="email">Что ищем?</label>
+                                </div>
                             </form>
                         </div>
                     </li>
@@ -45,8 +48,14 @@
                         <a href="#" class="enter">Вход</a>
                         <div class="enter_block">
                             <form class="enter_form" action="https://echo.htmlacademy.ru" method="post">
-                                <input type="email" name="email" placeholder="Электронная почта">
-                                <input type="password" name="password" placeholder="Пароль">
+                                <div class="hover_description">
+                                    <input type="email" name="email" id="email" placeholder="Электронная почта">
+                                    <label for="email">Электронная почта</label>
+                                </div>
+                                <div class="hover_description">
+                                    <input type="password" name="password" id="password" placeholder="Пароль">
+                                    <label for="password">Пароль</label>
+                                </div>
                                 <button class="btn" type="submit">Войти</button>
                                 <div class="forgotandreg">
                                     <a href="#">Забыли пароль?</a><br>
@@ -201,7 +210,11 @@
             <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
         </div>
     </footer>
-    <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p><!-->
-
+    <div class="modal_content">
+        <button type="button" class="modal_content_close" title="Закрыть">Закрыть</button>
+        <input type="text" placeholder="Как вас зовут?">
+        <input type="email" placeholder="Ваша почта для ответа?">
+        <textarea name="name" placeholder="Напишите что-нибудь..."></textarea>
+    </div>
   </body>
 </html>
