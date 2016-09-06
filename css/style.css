@@ -1147,7 +1147,7 @@ body input[type="radio"] {
     background: #849d8f url("../img/backlight.png") repeat-x;
 }
 .catalog_html .top_head .container {
-    background: none;
+    background: transparent;
 }
 .main_nav .active > a {
     background: #d07058;
