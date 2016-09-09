@@ -1,3 +1,4 @@
+
 body {
     position: relative;
     padding: 0;
@@ -14,14 +15,14 @@ h1 {
     line-height: 60px;
     color: #fff;
     font-weight: normal;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 h2 {
     font-size: 24px;
     line-height: 30px;
     color: #000;
     font-weight: normal;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 ul {
     margin: 0;
@@ -56,6 +57,9 @@ ul {
 .a_hover:active {
     color: #ffbc9e;
 }
+*.a_hover::after:hover {
+    background: rgba(249,172,159,.3);
+}
 .icecream_bg {
     font-size: 0;
     -webkit-transition: background .5s ease;
@@ -85,12 +89,14 @@ ul {
 }
 .item_list {
     display: none;
+    z-index: 100;
 }
 .main_nav {
     display: inline-block;
     vertical-align: top;
     padding-top: 23px;
-    margin-right: 37px;
+    -webkit-margin-right: 30px;
+    margin-right: 36px;
 }
 .main_nav > ul > li {
     display: inline-block;
@@ -149,6 +155,10 @@ ul {
 .main_nav .item_list li:active > a {
     background: #f6b5a5;
 }
+.main_nav .item_list li.current > a {
+    background: #d07058;
+    color: #fff;
+}
 .main_nav li:last-child {
     margin-right: 0;
 }
@@ -159,7 +169,7 @@ ul {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     color: #fff;
     border-radius: 14px;
 }
@@ -194,6 +204,7 @@ ul {
 .enter_block,
 .basket_block {
     display: none;
+    z-index: 100;
 }
 .hover_description {
     position: relative;
@@ -242,7 +253,7 @@ ul {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     color: #fff;
     text-decoration: none;
     border-radius: 17px;
@@ -467,7 +478,7 @@ ul {
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     color: #fff;
     text-align: right;
 }
@@ -476,7 +487,7 @@ ul {
     line-height: 24px;
     font-style: normal;
     font-weight: 900;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 .global_offer {
     position: relative;
@@ -493,7 +504,7 @@ ul {
     font-size: 60px;
     line-height: 60px;
     font-weight: 900;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 body input[type="radio"] {
     display: none;
@@ -548,7 +559,7 @@ body input[type="radio"] {
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     border-radius: 35px;
 }
@@ -561,9 +572,10 @@ body input[type="radio"] {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 40px;
-    padding: 18px 20px 0 20px;
+    padding: 15px 20px 0 20px;
 }
-.offer b {
+.offer h2 {
+    margin: 0;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -591,7 +603,7 @@ body input[type="radio"] {
 }
 .l_offer {
     position: relative;
-    margin-right: 20px;
+    margin-right: 16px;
     border-radius: 16px;
     background: #b30a2b url("../img/raspberry_bg.jpg") no-repeat;
 }
@@ -612,7 +624,7 @@ body input[type="radio"] {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-right: 20px;
+    margin-right: 15px;
     width:200px;
 }
 .act_prices li:nth-child(4n),
@@ -761,14 +773,14 @@ body input[type="radio"] {
     background: url("../img/thermometer_icon.svg") no-repeat;
 }
 .glacy_about p:nth-of-type(2n-1) {
-    margin-right: 20px;
+    margin-right: 18px;
 }
 .blog_news {
     display: inline-block;
     vertical-align: top;
     width: 380px;
     height: 196px;
-    margin-right: 20px;
+    margin-right: 16px;
     padding: 24px 20px 0 20px;
     border-radius: 16px;
     background: #fff url("../img/strawberry_bg.jpg") no-repeat;
@@ -803,7 +815,6 @@ body input[type="radio"] {
     text-decoration: none;
     color: transparent;
     background: transparent;
-    outline: 1px solid red;
 }
 .blog_news .blog_news_border span {
     border-bottom: 2px solid #353535;
@@ -980,7 +991,7 @@ body input[type="radio"] {
 
 .docs {
     width: 340px;
-    margin: 15px 53px 0 0;
+    margin: 15px 32px 0 0;
 }
 .docs li {
     display: inline-block;
@@ -1081,9 +1092,15 @@ body input[type="radio"] {
     background: #161616;
 }
 .modal_content button::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 .modal_content button::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 .modal_content input,
@@ -1147,7 +1164,7 @@ body input[type="radio"] {
     background: #849d8f url("../img/backlight.png") repeat-x;
 }
 .catalog_html .top_head .container {
-    background: none;
+    background: transparent;
 }
 .main_nav .active > a {
     background: #d07058;
@@ -1263,6 +1280,10 @@ button.cat_forms:hover {
 }
 .sort select {
     display: none;
+}
+.sort select option {
+    font-size: 14px;
+    line-height: 16px;
 }
 #sorting:checked ~ label[for="#sorting"] {
 
@@ -1423,6 +1444,9 @@ button.cat_forms:hover {
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
     cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 .fillers .cat_forms {

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси. Каталог</title>
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog_html">
       <header class="top_head">
@@ -19,7 +19,7 @@
                           <div class="item_list">
                               <p>Новинки</p>
                               <ul>
-                                  <li><a href="#">Сливочное</a></li>
+                                  <li class="current"><a href="#">Сливочное</a></li>
                                   <li><a href="#">Щербеты</a></li>
                                   <li><a href="#">Фруктовый лед</a></li>
                                   <li><a href="#">Мелорин</a></li>
@@ -101,9 +101,12 @@
                       <legend>Сортировка:</legend>
                       <div class="cat_forms">
                           <select name="sort">
-                              <option value="popular" id="sorting" selected></option>
+                              <option value="popular" id="popular" selected>по популярности</option>
+                              <option value="cheap" id="cheap">сначала недорогие</option>
+                              <option value="expensive" id="expensive">сначала дорогие</option>
+                              <option value="fatsort" id="fatsort">по жирности</option>
                           </select>
-                          <label for="#sorting">по популярности</label>
+                          <label>по популярности</label>
                       </div>
                   </fieldset>
                   <fieldset class="price_range" form="main_form">
@@ -152,7 +155,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit1.png" width="200" height="200" alt="" />
-                          <h3>310<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>310<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></p>
                       <div class="preview"></div>
@@ -164,7 +167,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit2.png" width="200" height="200" alt="" />
-                          <h3>380<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>380<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочно-кофейное с кусочками шоколада</span></p>
                       <div class="preview"></div>
@@ -176,7 +179,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit3.png" width="200" height="200" alt="" />
-                          <h3>355<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>355<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочно-клубничное с присыпкой из белого шоколада</span></p>
                       <div class="preview"></div>
@@ -188,7 +191,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit4.png" width="200" height="200" alt="" />
-                          <h3>415<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>415<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное крем-брюле с карамельной подливкой</span></p>
                       <div class="preview"></div>
@@ -200,7 +203,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit5.png" width="200" height="200" alt="" />
-                          <h3>325<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>325<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное с брусничным джемом</span></p>
                       <div class="preview"></div>
@@ -212,7 +215,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit6.png" width="200" height="200" alt="" />
-                          <h3>410<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>410<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочно-черничное с цельными ягодами черники</span></p>
                       <div class="preview"></div>
@@ -224,7 +227,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit7.png" width="200" height="200" alt="" />
-                          <h3>375<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>375<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочно-лимонное с карамельной присыпкой</span></p>
                       <div class="preview"></div>
@@ -236,7 +239,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit8.png" width="200" height="200" alt="" />
-                          <h3>320<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>320<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное с шоколадной стружкой</span></p>
                       <div class="preview"></div>
@@ -248,7 +251,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit9.png" width="200" height="200" alt="" />
-                          <h3>440<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>440<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочно-ванильное с кусочками шоколада</span></p>
                       <div class="preview"></div>
@@ -260,7 +263,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit10.png" width="200" height="200" alt="" />
-                          <h3>435<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>435<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочноe с ментоловым сиропом</span></p>
                       <div class="preview"></div>
@@ -272,7 +275,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit11.png" width="200" height="200" alt="" />
-                          <h3>355<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>355<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное с кусочками черного шоколада</span></p>
                       <div class="preview"></div>
@@ -284,7 +287,7 @@
                   <li>
                       <div class="icecream_hit">
                           <img src="img/icecream_hit12.png" width="200" height="200" alt="" />
-                          <h3>420<div class="ruble"></div><span>/кг</span></h3>
+                          <h3>420<b class="ruble"></b><span>/кг</span></h3>
                       </div>
                       <p><span>Сливочное с мятным сиропом</span></p>
                       <div class="preview"></div>
